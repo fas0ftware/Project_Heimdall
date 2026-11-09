@@ -16,4 +16,4 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install pandas
-      - run: python -m unittest discover -v
+      - run: python tests/test_indicators.py
