@@ -15,23 +15,26 @@ An interactive stock dashboard that turns raw market data into signals: RSI trac
 ## ◼ Features
 
 **Interactive dashboard**
-- **Live tracking:** Fetches current data for major US tech stocks (AAPL, TSLA, NVDA and more).
-- **RSI indicator:** Flags oversold (below 30) and overbought (above 70) conditions automatically.
-- **Interactive charts:** Zoomable Plotly visualizations.
+- **Market data:** Fetches historical data from Yahoo Finance for AAPL, TSLA, NVDA, MSFT, GOOGL, AMZN, META and COIN, over ranges from 1 month up to the full history.
+- **RSI indicator:** 14-period RSI (Wilder's smoothing) shown as a metric and in its own chart panel, with bands that mark oversold (below 30) and overbought (above 70) conditions.
+- **Interactive charts:** Zoomable Plotly charts with price and RSI sharing one time axis.
 
 **Time machine simulation (ROI calculator)**
-- **"What if" scenarios:** Shows what an investment of a chosen amount, made a chosen number of years ago, would be worth today.
-- **Split-adjusted logic:** Historical prices are adjusted for stock splits so the results stay accurate.
+- **"What if" scenarios:** Shows what an investment of a chosen amount, made at the start of the selected time range, would be worth today.
+- **Adjusted prices:** Prices come from yfinance with auto-adjust enabled, so splits (and dividends) do not distort the result.
 
 **Split hunter**
-- **Auto-detection:** Scans price history for stock splits.
-- **Visual markers:** Highlights split events directly on the chart (for example, NVIDIA's 10-for-1 split) so they are not mistaken for price crashes.
+- **Auto-detection:** Scans price history for stock splits and lists each one with its date and ratio (for example, `10-for-1`; reverse splits are shown as `1-for-10 (reverse)`).
+- **Visual markers:** Highlights split events directly on the chart so they are not mistaken for price crashes.
 
 ## ◼ Project structure
 
 ```
 Project_Heimdall/
-├── dashboard.py          # Streamlit app
+├── dashboard.py          # Streamlit app (UI and charts)
+├── indicators.py         # RSI, RSI labels and split ratio formatting
+├── tests/
+│   └── test_indicators.py
 ├── dashboard_preview.png # Screenshot used in this README
 └── requirements.txt      # Dependencies
 ```
@@ -79,11 +82,18 @@ Launch the dashboard in your default browser:
 streamlit run dashboard.py
 ```
 
+Run the indicator tests (only needs pandas):
+
+```bash
+python tests/test_indicators.py
+```
+
 ## ◼ Notes and limitations
 
 - Data availability and accuracy depend on the upstream data provider, and values can be delayed or incomplete.
 - The ROI simulation is a historical calculation, not a prediction.
-- RSI is one indicator among many and should not be used alone.
+- RSI is one indicator among many and should not be used alone. Short time ranges (such as 1 month) show only a few RSI points because the first 14 values need warm-up data.
+- `dashboard_preview.png` was taken before the RSI panel was added and may not match the current layout.
 
 ## ◼ Disclaimer
 
