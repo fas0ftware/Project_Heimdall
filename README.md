@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/fas0ftware/Project_Heimdall/actions/workflows/ci.yml/badge.svg)](https://github.com/fas0ftware/Project_Heimdall/actions/workflows/ci.yml)
 ![Version](https://img.shields.io/badge/version-2.0.0-blue)
-![Python](https://img.shields.io/badge/python-3.10%2B-yellow)
+![Python](https://img.shields.io/badge/python-3.11%2B-yellow)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.67%2B-FF4B4B)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
