@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="842" height="856" viewBox="0 0 842 856">
+<rect width="100%" height="100%" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect width="100%" height="32" rx="10" fill="#161b22"/><rect y="22" width="100%" height="10" fill="#161b22"/>
+<circle cx="18" cy="16" r="6" fill="#ff5f56"/><circle cx="38" cy="16" r="6" fill="#ffbd2e"/><circle cx="58" cy="16" r="6" fill="#27c93f"/>
+<text x="421" y="21" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" text-anchor="middle">Project_Heimdall — pytest</text>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" xml:space="preserve">
+<text x="14" y="56" fill="#58a6ff">$ python -m pytest -v</text>
+<text x="14" y="74" fill="#e6edf3">============================= test session starts ==============================</text>
+<text x="14" y="92" fill="#e6edf3">platform linux -- Python 3.14.4, pytest-9.2.0, pluggy-1.7.0 -- python</text>
+<text x="14" y="110" fill="#e6edf3">rootdir: .</text>
+<text x="14" y="128" fill="#e6edf3">plugins: anyio-4.16.0, platformdirs-4.14.5</text>
+<text x="14" y="146" fill="#e6edf3">collecting ... collected 35 items</text>
+<text x="14" y="164" fill="#e6edf3"></text>
+<text x="14" y="182" fill="#3fb950">tests/test_dashboard.py::test_renders_all_tabs_without_errors PASSED     [  2%]</text>
+<text x="14" y="200" fill="#3fb950">tests/test_dashboard.py::test_time_machine_reports_invested_amounts PASSED [  5%]</text>
+<text x="14" y="218" fill="#3fb950">tests/test_dashboard.py::test_invalid_custom_ticker_is_rejected PASSED   [  8%]</text>
+<text x="14" y="236" fill="#3fb950">tests/test_dashboard.py::test_custom_ticker_and_query_params PASSED      [ 11%]</text>
+<text x="14" y="254" fill="#3fb950">tests/test_dashboard.py::test_compare_tab_builds_table PASSED            [ 14%]</text>
+<text x="14" y="272" fill="#3fb950">tests/test_indicators.py::test_rsi_all_gains_is_100 PASSED               [ 17%]</text>
+<text x="14" y="290" fill="#3fb950">tests/test_indicators.py::test_rsi_all_losses_is_0 PASSED                [ 20%]</text>
+<text x="14" y="308" fill="#3fb950">tests/test_indicators.py::test_rsi_warmup_is_nan PASSED                  [ 22%]</text>
+<text x="14" y="326" fill="#3fb950">tests/test_indicators.py::test_rsi_stays_in_range PASSED                 [ 25%]</text>
+<text x="14" y="344" fill="#3fb950">tests/test_indicators.py::test_classify_rsi PASSED                       [ 28%]</text>
+<text x="14" y="362" fill="#3fb950">tests/test_indicators.py::test_format_split_ratio PASSED                 [ 31%]</text>
+<text x="14" y="380" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[aapl-AAPL] PASSED        [ 34%]</text>
+<text x="14" y="398" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[ brk-b -BRK-B] PASSED    [ 37%]</text>
+<text x="14" y="416" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[thyao.is-THYAO.IS] PASSED [ 40%]</text>
+<text x="14" y="434" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[^gspc-^GSPC] PASSED      [ 42%]</text>
+<text x="14" y="452" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[eurusd=x-EURUSD=X] PASSED [ 45%]</text>
+<text x="14" y="470" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[btc-usd-BTC-USD] PASSED  [ 48%]</text>
+<text x="14" y="488" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[GC=F-GC=F] PASSED        [ 51%]</text>
+<text x="14" y="506" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[-None] PASSED            [ 54%]</text>
+<text x="14" y="524" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[AAPL; rm -rf-None] PASSED [ 57%]</text>
+<text x="14" y="542" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[&lt;script&gt;-None] PASSED    [ 60%]</text>
+<text x="14" y="560" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[AAAAAAAAAAAAAAAAAAAA-None] PASSED [ 62%]</text>
+<text x="14" y="578" fill="#3fb950">tests/test_indicators.py::test_normalize_ticker[../x-None] PASSED        [ 65%]</text>
+<text x="14" y="596" fill="#3fb950">tests/test_indicators.py::test_sma_and_bollinger PASSED                  [ 68%]</text>
+<text x="14" y="614" fill="#3fb950">tests/test_indicators.py::test_macd_sign_follows_trend PASSED            [ 71%]</text>
+<text x="14" y="632" fill="#3fb950">tests/test_indicators.py::test_golden_and_death_cross_detected PASSED    [ 74%]</text>
+<text x="14" y="650" fill="#3fb950">tests/test_indicators.py::test_no_cross_without_enough_history PASSED    [ 77%]</text>
+<text x="14" y="668" fill="#3fb950">tests/test_indicators.py::test_max_drawdown_and_series PASSED            [ 80%]</text>
+<text x="14" y="686" fill="#3fb950">tests/test_indicators.py::test_risk_stats_known_values PASSED            [ 82%]</text>
+<text x="14" y="704" fill="#3fb950">tests/test_indicators.py::test_risk_stats_short_period_has_no_cagr PASSED [ 85%]</text>
+<text x="14" y="722" fill="#3fb950">tests/test_indicators.py::test_lump_sum PASSED                           [ 88%]</text>
+<text x="14" y="740" fill="#3fb950">tests/test_indicators.py::test_dca_buys_once_per_month PASSED            [ 91%]</text>
+<text x="14" y="758" fill="#3fb950">tests/test_indicators.py::test_dca_beats_lump_sum_in_a_falling_then_recovering_market PASSED [ 94%]</text>
+<text x="14" y="776" fill="#3fb950">tests/test_indicators.py::test_normalize_and_correlation PASSED          [ 97%]</text>
+<text x="14" y="794" fill="#3fb950">tests/test_indicators.py::test_demo_history_shape_and_determinism PASSED [100%]</text>
+<text x="14" y="812" fill="#e6edf3"></text>
+<text x="14" y="830" fill="#3fb950">============================== 35 passed in 2.19s ==============================</text>
+</g></svg>
